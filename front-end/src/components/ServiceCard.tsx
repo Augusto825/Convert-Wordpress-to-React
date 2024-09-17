@@ -1,4 +1,3 @@
-
 import React from "react";
 
 interface ServiceCardProps {
@@ -17,7 +16,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className="flex flex-col flex-1 shrink justify-center px-4 basis-0 min-w-[240px]">
       <div
-        className={`flex flex-col px-12 pt-12 pb-20 w-full rounded-xl shadow-sm ${backgroundColor} min-h-[556px] max-md:px-5`}
+        className={`flex flex-col px-12 pt-12 pb-20 w-full rounded-xl shadow-sm ${backgroundColor} min-h-[556px] max-md:px-5 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg`}
       >
         <div className="flex flex-col justify-center w-full max-w-[350px]">
           <div className="flex flex-col flex-1 w-full">

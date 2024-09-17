@@ -4,6 +4,7 @@ import Layout from '../Layout';
 import Hero from "../Hero";
 import Services from "../Services";
 import ContactForm from "../ContactForm";
+import ServiceCards from "../ServiceCards/ServiceCards";
 
 const HomePage: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ const HomePage: React.FC = () => {
           </h3>
         </div>
       </section>
+      <ServiceCards />
       <ContactForm />
     </Layout>
   );
