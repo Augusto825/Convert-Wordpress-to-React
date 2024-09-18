@@ -7,8 +7,8 @@ const Footer: React.FC = () => {
       <div className="flex flex-col flex-1 justify-center py-12 w-full">
         <div className="flex flex-col justify-center w-full max-w-[1140px] max-md:max-w-full">
           <div className="flex flex-col flex-1 w-full max-md:max-w-full">
-            <div className="pl-96 w-full pr-[572px] max-md:px-5 max-md:max-w-full">
-              כל הזכויות שמורות |
+            <div className="w-full max-md:px-5 max-md:max-w-full">
+            © 2023 AI Web Dev | כל הזכויות שמורות
             </div>
           </div>
         </div>

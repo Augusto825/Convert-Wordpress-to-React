@@ -5,11 +5,16 @@ import Hero from "../Hero";
 import Services from "../Services";
 import ContactForm from "../ContactForm";
 import ServiceCards from "../ServiceCards/ServiceCards";
+import FeatureCards from "../FeatureCards/FeatureCards";
+import ContactSection from "../ContactSection/ContactSection";
+import Footer from "../FooterComponents/Footer";
+import ScrollToTopButton from "../ScrollToTopButton";
 
 const HomePage: React.FC = () => {
   return (
     <Layout>
       <Hero />
+      <ScrollToTopButton />
       <Services />
       <section className="flex flex-col justify-center items-center px-96 mt-20 w-full font-bold leading-tight text-center text-zinc-600 max-md:px-5 max-md:mt-10 max-md:max-w-full">
         <div className="flex flex-col flex-1 items-center py-2.5 max-w-full w-[1140px]">
@@ -37,7 +42,10 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       <ServiceCards />
+      <FeatureCards />
+      <ContactSection />
       <ContactForm />
+      <Footer />
     </Layout>
   );
 };

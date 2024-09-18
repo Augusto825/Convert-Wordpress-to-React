@@ -21,7 +21,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="flex flex-col justify-center w-full max-w-[350px]">
           <div className="flex flex-col flex-1 w-full">
             <div className="flex flex-col w-full">
-              <div className="flex items-center w-full">
+              <div className="flex justify-end w-full">
                 <img
                   loading="lazy"
                   src={imageUrl}
