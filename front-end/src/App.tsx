@@ -1,12 +1,24 @@
-import React from 'react';
-import './tailwind.css';
-import HomePage from './components/pages/HomePage';
-function App() {
+import React from "react";
+import './tailwind.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from "./pages/HomePage";
+import MainLayout from "./layouts/MainLayout";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+
+
+const App: React.FC = () => {
   return (
-    <div className='m-0'>
-      <HomePage />
-    </div>
-  );
+    <Router>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </MainLayout>
+    </Router>
+  )
 }
 
 export default App;
