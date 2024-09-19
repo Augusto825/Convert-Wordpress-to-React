@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage";
 import MainLayout from "./layouts/MainLayout";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import Portfolio from "./pages/PortfolioPage";
+import PortfolioPage from "./pages/PortfolioPage";
 import OurWayPage from "./pages/OurWayPage";
 
 
@@ -17,7 +17,7 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/דף הבית" element={<HomePage />} />
           <Route path="/אודותינו" element={<AboutPage />} />
-          <Route path="/תיק עבודות" element={<Portfolio />} />
+          <Route path="/תיק עבודות" element={<PortfolioPage/>} />
           <Route path="/הדרך שלנו" element={<OurWayPage/>} />
           <Route path="/צרו קשר" element={<ContactPage />} />
           <Route path="/" element={<HomePage />} />

@@ -5,7 +5,7 @@ const ContactForm: React.FC = () => {
   return (
     <form className="flex flex-col flex-1 shrink justify-center items-center self-stretch p-2.5 my-auto w-full basis-0 min-w-[240px] max-md:max-w-full">
       <div className="flex flex-col justify-center w-full max-w-[570px] max-md:max-w-full">
-        <div className="flex flex-col flex-1 px-6 pt-8 pb-8 w-full bg-white rounded-xl shadow-sm max-md:px-5 max-md:max-w-full">
+        <div className="flex flex-col flex-1 px-6 pt-8 pb-8 w-full bg-white rounded-xl shadow-custom-black max-md:px-5 max-md:max-w-full">
           <div className="flex flex-col justify-center w-full max-md:max-w-full">
             <div className="flex flex-col justify-center pb-2.5 w-full text-base text-right min-h-[55px] text-slate-800 max-md:max-w-full">
               <div className="flex flex-wrap justify-center items-center px-1.5 w-full min-h-[45px] max-md:max-w-full">

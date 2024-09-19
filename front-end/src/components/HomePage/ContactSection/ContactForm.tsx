@@ -5,7 +5,7 @@ interface ContactFormProps {}
 const ContactForm: React.FC<ContactFormProps> = () => {
   return (
     <div className="max-w-full">
-      <div className="p-[30px] shadow-inner rounded-xl shadow-gray-900">
+      <div className="p-[30px] shadow-custom-black rounded-xl">
         <form className="text-base text-right text-white max-md:max-w-full">
           <input type="hidden" name="post_id" value="1282" />
           <input type="hidden" name="form_id" value="0acf433" />
@@ -15,7 +15,7 @@ const ContactForm: React.FC<ContactFormProps> = () => {
             value="דף הבית - AIWEBDEV"
           />
           <input type="hidden" name="queried_id" value="1282" />
-          <div className=" mx-[-8px] mb-[-16px] flex flex-wrap bg-[#19212A] rounded-xl shadow-sm max-md:px-5 max-md:max-w-full">
+          <div className=" mx-[-8px] mb-[-16px] flex flex-wrap bg-[#19212A] rounded-xl max-md:px-5 max-md:max-w-full">
             <div className="px-2 mb-4 w-3/6 max-md:max-w-[50%] min-h-[61px]">
               <input
                 type="text"

@@ -18,7 +18,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <div className="flex flex-col justify-center p-2.5 w-full min-h-[312px]">
         {/* Add `group` here */}
         <div className="flex flex-col justify-center w-full max-w-[350px] group">
-          <div className="flex flex-col flex-1 justify-center px-10 py-12 w-full bg-white rounded-xl shadow-sm max-md:px-5 transition-colors duration-300 group-hover:bg-[#35023D] group-hover:text-white">
+          <div className="flex flex-col flex-1 justify-center px-10 py-12 w-full bg-white rounded-xl shadow-custom-black max-md:px-5 transition-colors duration-300 group-hover:bg-[#35023D] group-hover:text-white">
             <div className="flex flex-col w-full">
               <div className="flex items-start self-center w-[50px] h-[50px]">
                 {/* SVG icon with group-hover */}

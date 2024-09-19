@@ -29,25 +29,24 @@ const Header: React.FC<HeaderProps> = ({ navItems }) => {
   return (
     <div className="w-full">
       <header
-      dir="rtl"
-        className="fixed px-[10px] w-full z-50 transition-colors duration-300 content-center"
+        dir="rtl"
+        className="fixed px-[10px] w-full z-50 transition-colors shadow-custom-black duration-300 content-center"
         style={{ backgroundColor: bgColor, minHeight: "100px" }} // Changed from 90px to 100px
       >
         <div className="container mx-auto my-0 flex-wrap flex-col xl:flex-row basis-auto flex-grow max-w-[1140px] w-full shrink flex items-center justify-between py-[10px] h-full">
           {/* Navigation and Logo Wrapper */}
           {/* Logo */}
           <div className="flex-shrink-0 ml-5 w-[120px] h-[80px]">
-              {" "}
-              {/* Adjusted logo height */}
-              <img
-                loading="lazy"
-                src={Logo}
-                className="object-contain w-full h-full"
-                alt="Company logo"
-              />
-            </div>
+            {" "}
+            {/* Adjusted logo height */}
+            <img
+              loading="lazy"
+              src={Logo}
+              className="object-contain w-full h-full"
+              alt="Company logo"
+            />
+          </div>
           <div className=" relative xl:left-[250px] order-1">
-            
             {/* Desktop Navigation */}
             <nav className="hidden md:flex flex-1 justify-center space-x-4">
               <ul className="flex items-center w-full justify-center">

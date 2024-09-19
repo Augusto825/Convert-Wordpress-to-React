@@ -5,7 +5,7 @@ const ContactForm: React.FC = () => {
     <section className="my-20 flex grow-0 shrink-0 w-full flex-row justify-center self-stretch">
       <div className="flex grow-0 shrink-0 w-3/5 justify-center mr-[60px] duration-300">
         <div className=" max-w-full w-full">
-          <div className=" p-[30px] bg-white rounded-[10px] shadow-md">
+          <div className=" p-[30px] bg-white rounded-[10px] shadow-custom-black">
             <form className="max-md:max-w-full">
               <input type="hidden" name="post_id" value="1282" />
               <input type="hidden" name="form_id" value="1282" />

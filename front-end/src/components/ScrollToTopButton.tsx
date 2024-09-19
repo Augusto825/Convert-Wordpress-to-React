@@ -34,7 +34,7 @@ const ScrollToTopButton: React.FC = () => {
     <div
       id="ast-scroll-top"
       tabIndex={0}
-      className="fixed bottom-5 right-5 bg-[#046bd2] rounded-xl p-3 shadow-lg cursor-pointer"
+      className="fixed bottom-5 right-5 bg-[#046bd2] rounded-xl p-3 shadow-custom-black cursor-pointer"
       onClick={scrollToTop}
     >
       <span className="ast-icon icon-arrow">
