@@ -1,11 +1,14 @@
 
 import React from "react";
-import ContactForm from "../components/ContactUs/ContactForm";
+import Header from "../../../../components/ContactPage/Header";
+import ContactForm from "./ContactForm";
+import Footer from "../../../../components/ContactPage/Footer";
 
 const ContactPage: React.FC = () => {
   return (
     <div className="flex overflow-hidden relative flex-col bg-[linear-gradient(0deg,#D6DCE4_0%,#D6DCE4_100%,#FFF)]">
       <div className="flex z-0 flex-col pt-2.5 w-full min-h-[1200px] max-md:max-w-full">
+        <Header />
         <main className="flex flex-col flex-1 items-center w-full max-md:max-w-full">
           <section className="flex justify-center w-full max-w-[1920px] min-h-[1029px] max-md:max-w-full">
             <div className="flex flex-col flex-1 shrink w-full basis-0 min-w-[240px] max-md:max-w-full">
@@ -41,6 +44,7 @@ const ContactPage: React.FC = () => {
             </div>
           </section>
         </main>
+        <Footer />
       </div>
     </div>
   );

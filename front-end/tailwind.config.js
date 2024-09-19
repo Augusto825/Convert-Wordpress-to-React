@@ -4,7 +4,11 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'custom-black': '0px 0px 10px 0px rgba(0,0,0,0.5)'
+      }
+    },
   },
   variants: {},
   plugins: [],

@@ -5,14 +5,12 @@ import ContactForm from "../components/HomePage/ContactForm";
 import ServiceCards from "../components/HomePage/ServiceCards/ServiceCards";
 import FeatureCards from "../components/HomePage/ServiceCards/FeatureCards/FeatureCards";
 import ContactSection from "../components/HomePage/ContactSection/ContactSection";
-import ScrollToTopButton from "../components/ScrollToTopButton";
 import ServiceTitle from "../components/HomePage/ServiceTitle";
 
 const HomePage: React.FC = () => {
   return (
     <div>
       <Hero />
-      <ScrollToTopButton />
       <Services />
       <ServiceTitle />
       <ServiceCards />
