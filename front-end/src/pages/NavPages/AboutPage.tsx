@@ -1,7 +1,7 @@
 
 import React from "react";
-import HeroSection from "../components/AboutUs/HeroSection";
-import ContentSection from "../components/AboutUs/ContentSection";
+import HeroSection from "../../components/AboutUs/HeroSection";
+import ContentSection from "../../components/AboutUs/ContentSection";
 
 const AboutUs: React.FC = () => {
   return (

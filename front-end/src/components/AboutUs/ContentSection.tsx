@@ -8,7 +8,7 @@ const ContentSection: React.FC = () => {
         <div className="w-full max-w-[1140px] max-md:max-w-full">
           <div className="pt-14 pr-11 pb-10 w-full bg-white rounded-lg shadow-custom-black max-md:pr-5 max-md:max-w-full">
             <div className="w-full max-md:max-w-full">
-              <div dir="rtl" className="w-full max-md:max-w-full font-[Rubik] font-medium">
+              <div dir="rtl" className="w-full max-md:max-w-full font-rubik font-medium">
                 <p className="w-full mb-7 max-md:max-w-full">
                   לאחר שעבדתי בהייטק משנת 2013 והחלטתי להקים את החברה, הצבתי
                   לעצמי מטרה לספק פתרונות דיגיטליים ברמה הגבוהה ביותר לעסקים מכל

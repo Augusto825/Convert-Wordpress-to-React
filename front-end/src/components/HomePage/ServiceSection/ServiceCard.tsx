@@ -28,10 +28,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             />
           </div>
           <div className="w-full text-right">
-            <h3 className="pb-px w-full text-[24px] font-bold leading-tight text-sky-400 font-[Rubik]">
+            <h3 className="pb-px w-full text-[24px] font-bold leading-tight text-sky-400 font-rubik">
               {title}
             </h3>
-            <p className="pb-px w-full text-base leading-7 text-neutral-500 font-[Roboto]">
+            <p className="pb-px w-full text-base leading-7 text-neutral-500 font-rubik">
               {description}
             </p>
           </div>

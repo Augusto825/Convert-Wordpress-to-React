@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "../components/Portfolio/Hero";
-import Portfolio from "../components/Portfolio/Portfolio";
-import Testimonials from "../components/Portfolio/Testimonials";
+import Hero from "../../components/Portfolio/Hero";
+import Portfolio from "../../components/Portfolio/Portfolio";
+import Testimonials from "../../components/Portfolio/Testimonials";
 
  const PortfolioPage: React.FC = () => {
   return (
