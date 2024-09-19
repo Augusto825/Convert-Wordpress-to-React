@@ -42,12 +42,6 @@ const Hero: React.FC = () => {
                   התחל כאן
                 </div>
                 <div className="items-center w-5">
-                  {/* <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/6fca10ec972a43181429d346c559e797e2904e77d9185308affc950d41c7b2cd?placeholderIfAbsent=true&apiKey=addd44d0d4a74bbf9dcbe1a996be8856"
-                    className="object-contain w-5 aspect-square"
-                    alt=""
-                  /> */}
                   <svg
                     width="21"
                     height="20"

@@ -1,6 +1,10 @@
 
 import React from "react";
 import ServiceCard from "./ServiceCard";
+import { isImportTypeAssertionContainer } from "typescript";
+import OverviewImg1 from "../../../assets/images/overview-icon1.png.png"
+import OverviewImg2 from "../../../assets/images/overview-icon2.png.png"
+import OverviewImg3 from "../../../assets/images/overview-icon3.png.png"
 
 interface Service {
   title: string;
@@ -15,8 +19,8 @@ const services: Service[] = [
     title: "קידום בפייסבוק ויצירת תוכן",
     description:
       "אנו נדאג לקידום ממוקד בפייסבוק שימשוך את קהל היעד שלך ויביא לתוצאות מיטביות. ניצור עבורך תוכן איכותי ומקצועי, נבצע ניהול קמפיינים, ונבנה עבורך אסטרטגיות תוכן שמותאמות לצרכים העסקיים שלך. כל זה בכדי להבטיח שהלקוחות הפוטנציאליים שלך יוכלו להתחבר למותג שלך ולהפוך ללקוחות נאמנים.",
-    imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/c8ce8af5ef9e09d9830b0d5470c1b746a950c6a95167bc17ccb6abec79aa34ee?placeholderIfAbsent=true&apiKey=addd44d0d4a74bbf9dcbe1a996be8856",
+    imageUrl: 
+      OverviewImg3,
     backgroundColor: "bg-amber-100",
   },
   {
@@ -24,7 +28,7 @@ const services: Service[] = [
     description:
       "קידום העסק שלך באינסטגרם באמצעות אסטרטגיות ממוקדות שיביאו לחשיפה רחבה יותר. ניצור עבורך פוסטים איכותיים ומעוררי עניין, נבצע אופטימיזציה למודעות וננהל את הקמפיינים שלך כדי להבטיח שהמותג שלך יזכה להכרה וירחיב את קהל הלקוחות. הקידום שלנו באינסטגרם מותאם במיוחד כדי למשוך את תשומת הלב של הקהל הנכון ולהוביל לתוצאות מצוינות.",
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/8a49c8bb740c544afad8bae383f4d0ef5ebdcf4ef85469db332ebe954832d83f?placeholderIfAbsent=true&apiKey=addd44d0d4a74bbf9dcbe1a996be8856",
+      OverviewImg2,
     backgroundColor: "bg-rose-200",
   },
   {
@@ -32,7 +36,7 @@ const services: Service[] = [
     description:
       "אנו מתמחים בבניית אתרים מותאמים אישית, שמותאמים במיוחד לצרכים הייחודיים של העסק שלך. האתר שנבנה עבורך יכלול עיצוב מקצועי, חוויית משתמש מעולה, ואופטימיזציה כדי להבטיח שהלקוחות ימצאו אותך בקלות. עם אתר אינטרנט יעיל, העסק שלך יזכה לחשיפה גבוהה יותר ויגדיל את ההמרות.",
     imageUrl:
-      "https://cdn.builder.io/api/v1/image/assets/TEMP/ef96eb03d6c59b072674ba1954c811c370c0574b1099cf8d0a37be5f9ffebfd1?placeholderIfAbsent=true&apiKey=addd44d0d4a74bbf9dcbe1a996be8856",
+      OverviewImg1,
     backgroundColor: "bg-[#D7CCD8]",
   },
 ];

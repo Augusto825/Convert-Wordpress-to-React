@@ -1,6 +1,6 @@
 
 import React from "react";
-import ServiceCard from "../ServiceCards/ServiceCard";
+import ServiceCard from "../ServiceCard";
 
 const featureData = [
   {

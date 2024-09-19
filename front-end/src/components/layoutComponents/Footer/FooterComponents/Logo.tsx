@@ -1,5 +1,6 @@
 
 import React from "react";
+import FooterImg from '../../../../assets/images/logo1.png'
 
 const Logo: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const Logo: React.FC = () => {
       <div className="flex flex-col justify-center max-w-full">
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/f504b80141c6414a2a719e3ffd8edfc0bc6101f45784ce468c91c036d907fecd?placeholderIfAbsent=true&apiKey=addd44d0d4a74bbf9dcbe1a996be8856"
+          src={FooterImg}
           className="object-contain self-stretch my-auto aspect-[1.49] max-w-[139px] w-[139px]"
           alt="Company logo"
         />

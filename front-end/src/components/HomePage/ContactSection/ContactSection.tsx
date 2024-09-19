@@ -1,6 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 import BulletPoints from "./BulletPoints";
+import ContactSectionIcon from '../../../assets/images/contact-settion-logo.png'
 
 interface ContactSectionProps {}
 
@@ -32,7 +33,7 @@ const ContactSection: React.FC<ContactSectionProps> = () => {
             <div className="items-center pl-14 w-full max-md:pl-5 max-md:max-w-full">
               <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/e14743d02f1de7bbf65b403c99ebcf5d75c0bde2ca823aa38422854a817d26e4?placeholderIfAbsent=true&apiKey=addd44d0d4a74bbf9dcbe1a996be8856"
+                src={ContactSectionIcon}
                 className="object-contain w-full rounded-xl aspect-square max-w-[434px]"
                 alt="Software development illustration"
               />
