@@ -1,68 +1,110 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {}
+
+const ContactForm: React.FC<ContactFormProps> = () => {
+  // State to manage form inputs
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+  });
+  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+
+  // Handle input change
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setFormData({ ...formData, [id]: value });
+  };
+
+  // Handle form submission using Axios
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/api/leads", formData);
+
+      if (response.status === 200) {
+        setSuccessMessage("Form submitted successfully!");
+        setFormData({ fullName: "", phone: "", email: "" }); // Clear form
+        setError("");
+      }
+    } catch (error: any) {
+      if (error.response && error.response.data && error.response.data.errors) {
+        setError(error.response.data.errors.join(", "));
+      } else {
+        setError("Failed to submit the form");
+      }
+    }
+  };
+
   return (
-    <section className="my-20 flex grow-0 shrink-0 w-full flex-row justify-center self-stretch">
-      <div className="flex grow-0 shrink-0 w-3/5 justify-center mr-[60px] duration-300">
-        <div className=" max-w-full w-full">
-          <div className=" p-[30px] bg-white rounded-[10px] shadow-custom-black">
-            <form className="max-md:max-w-full">
-              <input type="hidden" name="post_id" value="1282" />
-              <input type="hidden" name="form_id" value="1282" />
-              <input type="hidden" name="referer_title" value="1282" />
-              <input type="hidden" name="queried_id" value="1282" />
-              <div className="flex flex-wrap flex-col mx-[-5px] mb-[-10px] max-md:max-w-full">
-                {/* Full Name Field */}
-                <div className="flex flex-col flex-1 shrink self-stretch flex-wrap items-center px-[5px] mb-[10px] relative min-h-[1px] w-full bg-white border-b border-b-yellow-500 max-w-[1082px] focus-within:border focus-within:border-gray-300 focus-within:rounded-sm">
-                  <input
-                    type="text"
-                    id="fullName"
-                    name="fullName"
-                    dir="rtl"
-                    className="w-full bg-transparent outline-none py-2 px-4 text-right"
-                    placeholder="שם מלא *"
-                    required
-                  />
-                </div>
-                {/* Phone Field */}
-                <div className="flex flex-col flex-1 shrink self-stretch flex-wrap items-center px-[5px] mb-[10px] relative min-h-[1px] w-full bg-white border-b border-b-yellow-500 max-w-[1082px] focus-within:border focus-within:border-gray-300 focus-within:rounded-sm">
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    dir="rtl"
-                    className="w-full bg-transparent outline-none py-2 px-4 text-right"
-                    placeholder="טלפון *"
-                    required
-                  />
-                </div>
-                {/* Email Field */}
-                <div className="flex flex-col flex-1 shrink self-stretch flex-wrap items-center px-[5px] mb-[10px] relative min-h-[1px] w-full bg-white border-b border-b-yellow-500 max-w-[1082px] focus-within:border focus-within:border-gray-300 focus-within:rounded-sm">
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    dir="rtl"
-                    className="w-full bg-transparent outline-none py-2 px-4 text-right"
-                    placeholder="כתובת מייל *"
-                    required
-                  />
-                </div>
-              <div className="flex shrink self-stretch flex-wrap items-end justify-end px-[5px] mb-[10px] relative w-full font-medium leading-none text-center text-white min-h-[50px] max-md:max-w-full">
-                  <button
-                    type="submit"
-                    className="flex justify-center bg-yellow-500 px-6 rounded min-h-[40px] max-md:px-5"
-                  >
-                    <span className="self-stretch my-auto">צור פניה חדשה</span>
-                  </button>
-              </div>
-              </div>
-              {/* Submit Button */}
-            </form>
+    <div className="max-w-full">
+      <div className="p-[30px] shadow-custom-black rounded-xl">
+        <form className="text-base text-right text-white max-md:max-w-full" onSubmit={handleSubmit}>
+          <input type="hidden" name="post_id" value="1282" />
+          <input type="hidden" name="form_id" value="0acf433" />
+          <input
+            type="hidden"
+            name="referer_title"
+            value="דף הבית - AIWEBDEV"
+          />
+          <input type="hidden" name="queried_id" value="1282" />
+          <div className=" mx-[-8px] mb-[-16px] flex flex-wrap bg-[#19212A] rounded-xl max-md:px-5 max-md:max-w-full">
+            <div className="px-2 mb-4 w-3/6 max-md:max-w-[50%] min-h-[61px]">
+              <input
+                type="text"
+                id="fullName"
+                className="shrink self-stretch p-3 my-auto w-full bg-[#19212A] rounded-sm border-b border-solid basis-0 border-b-yellow-500 max-w-[195px] min-h-[40px] transition-colors duration-300
+                   focus-visible:outline-none focus-visible:border-yellow-800"
+                placeholder="שם מלא *"
+                required
+                value={formData.fullName}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="px-2 mb-4 w-3/6 max-md:max-w-[50%] min-h-[61px]">
+              <input
+                type="tel"
+                id="phone"
+                dir="rtl"
+                className="shrink self-stretch p-3 my-auto w-full bg-[#19212A] rounded-sm border-b border-solid basis-0 border-b-yellow-500 max-w-[195px] min-h-[40px] max-md:pl-5 transition-colors duration-300
+                   focus-visible:outline-none focus-visible:border-yellow-800"
+                placeholder="טלפון *"
+                required
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="px-2 mb-4 w-3/6 max-md:max-w-[50%] min-h-[61px]">
+              <input
+                type="email"
+                id="email"
+                className="shrink self-stretch p-3 my-auto w-full bg-[#19212A] rounded-sm border-b border-solid basis-0 border-b-yellow-500 max-w-[195px] min-h-[40px] transition-colors duration-300
+                  focus-visible:outline-none focus-visible:border-yellow-800"
+                placeholder="כתובת מייל *"
+                required
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="flex justify-end font-medium px-2 mb-4 w-full max-md:max-w-full leading-none text-center text-yellow-500">
+              <button
+                type="submit"
+                className="w-1/3 p-[7px] shrink justify-center bg-[#19212A] border border-yellow-500 border-solid min-h-[40px] transition-colors duration-300 hover:border-white hover:text-white"
+              >
+                <span className="pr-1.5 text-xs w-full">
+                  <span>צור פניה חדשה</span>
+                </span>
+              </button>
+            </div>
           </div>
-        </div>
+          {error && <p className="text-red-500 text-center">{error}</p>} {/* Display errors */}
+          {successMessage && <p className="text-green-500 text-center">{successMessage}</p>} {/* Display success message */}
+        </form>
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios"; // Import Axios
 
-const ReloadContactModal: React.FC = () => {
+const LeadModal: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [error, setError] = useState("");
 
   useEffect(() => {
     // Delay to show the modal (2 seconds for demonstration)
@@ -18,6 +25,39 @@ const ReloadContactModal: React.FC = () => {
     setIsVisible(false);
   };
 
+  // Handle input change
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Handle form submission using Axios
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:5000/api/leads", formData);
+
+      if (response.status === 200) {
+        alert(response.data.message); // Notify user of success
+        closeModal(); // Close modal on success
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+        }); // Clear form after success
+        setError(""); // Clear any previous errors
+      } else {
+        setError("Something went wrong");
+      }
+    } catch (err: any) {
+      if (err.response && err.response.data && err.response.data.errors) {
+        setError(err.response.data.errors.join(", ")); // Display backend errors
+      } else {
+        setError("Failed to submit the form");
+      }
+    }
+  };
+
   // Close modal when clicking on the background
   const handleBackgroundClick = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
@@ -31,7 +71,7 @@ const ReloadContactModal: React.FC = () => {
         <div
           dir="ltr"
           className="fixed inset-0 z-[100] flex items-center justify-center bg-black bg-opacity-75"
-          onClick={handleBackgroundClick} // Added click handler to background
+          onClick={handleBackgroundClick}
         >
           <div className="flex flex-col bg-[#19212A] w-1/2 font-rubik h-full md:max-w-4xl md:h-auto rounded-lg shadow-lg">
             {/* Modal Content */}
@@ -51,12 +91,11 @@ const ReloadContactModal: React.FC = () => {
                     בואו נעבוד ביחד
                   </h2>
                   <h2 className="text-[24px] font-rubik font-normal text-white text-end">
-                    החל מ-500 ש"ח לחודש לקידום: אינסטגרם / פייסבוק וקידום לוקאלי
-                    בגוגל
+                    החל מ-500 ש"ח לחודש לקידום: אינסטגרם / פייסבוק וקידום לוקאלי בגוגל
                   </h2>
                   <div>
                     <div className="p-[30px] rounded-[10px] shadow-custom-black">
-                      <form className="mt-4">
+                      <form className="mt-4" onSubmit={handleSubmit}>
                         <input type="hidden" name="post_id" value="4079" />
                         <input type="hidden" name="form_id" value="a181e66" />
                         <input type="hidden" name="queried_id" value="2272" />
@@ -69,19 +108,23 @@ const ReloadContactModal: React.FC = () => {
                               type="text"
                               placeholder="שם מלא *"
                               id="form-field-name"
-                              name="form_fields[name]"
+                              name="name"
                               dir="rtl"
+                              value={formData.name}
+                              onChange={handleChange}
                               className="w-full bg-transparent outline-none py-2 px-4 text-right border-b border-b-yellow-500 focus-within:border-gray-300 focus-within:rounded-sm"
                               required
                             />
                           </div>
                           <div className="flex flex-col px-2 mb-[16px] w-full md:w-1/2">
                             <input
-                              type="number"
+                              type="text"
                               placeholder="טלפון *"
-                              id="form-field-email"
-                              name="form_fields[email]"
+                              id="form-field-phone"
+                              name="phone"
                               dir="rtl"
+                              value={formData.phone}
+                              onChange={handleChange}
                               className="w-full bg-transparent outline-none py-2 px-4 text-right border-b border-b-yellow-500 focus-within:border-gray-300 focus-within:rounded-sm"
                               required
                             />
@@ -89,10 +132,12 @@ const ReloadContactModal: React.FC = () => {
                           <div className="flex flex-col px-2 mb-[16px] w-full md:w-1/2">
                             <input
                               type="email"
-                              placeholder="טלפון *"
-                              id="form_fields[field_fe08a14]"
-                              name="form_fields[field_fe08a14]"
+                              placeholder="אימייל *"
+                              id="form-field-email"
+                              name="email"
                               dir="rtl"
+                              value={formData.email}
+                              onChange={handleChange}
                               className="w-full bg-transparent outline-none py-2 px-4 text-right border-b border-b-yellow-500 focus-within:border-gray-300 focus-within:rounded-sm"
                               required
                             />
@@ -106,6 +151,7 @@ const ReloadContactModal: React.FC = () => {
                             </button>
                           </div>
                         </div>
+                        {error && <p className="text-red-500 text-center">{error}</p>} {/* Display error */}
                       </form>
                     </div>
                   </div>
@@ -119,4 +165,4 @@ const ReloadContactModal: React.FC = () => {
   );
 };
 
-export default ReloadContactModal;
+export default LeadModal;
