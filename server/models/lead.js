@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 // Define the lead schema
 const lead = new mongoose.Schema({
-  name: {
+  fullName: {
     type: String,
     required: true,
     minlength: 3
@@ -13,7 +13,7 @@ const lead = new mongoose.Schema({
     required: true,
     match: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   },
-  message: {
+  phone: {
     type: String,
     required: true,
   },
@@ -24,4 +24,4 @@ const lead = new mongoose.Schema({
 });
 
 // Export the Lead model
-module.exports = mongoose.model('Lead', lead);
+module.exports = mongoose.model('Leads', lead);

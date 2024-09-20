@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const leadRoutes = require('./routes/leadRoutes');
+const leadRoutes = require('./routes/lead');
 const connectDB = require('./config/db');
 
 // Initialize express app

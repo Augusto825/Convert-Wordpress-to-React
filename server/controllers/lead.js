@@ -9,11 +9,11 @@ exports.createLead = async (req, res) => {
     return res.status(400).json({ success: false, errors: errors.array() });
   }
 
-  const { name, email, message } = req.body;
+  const { fullName, email, phone } = req.body;
 
   try {
     // Create and save new lead
-    const newLead = new Lead({ name, email, message });
+    const newLead = new Lead({ fullName, email, phone });
     await newLead.save();
 
     // Send success response
