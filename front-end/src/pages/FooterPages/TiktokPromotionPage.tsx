@@ -10,7 +10,7 @@ const TiktokPromotionPage: React.FC = () => {
     <div className="flex overflow-hidden relative flex-col bg-[linear-gradient(0deg,#D6DCE4_0%,#D6DCE4_100%,#FFF)]">
       <div className="flex z-0 flex-col pt-2.5 w-full max-md:max-w-full">
         <main>
-          <HeroSection title="מגמות עיצוב אתרים בשנת 2023"  />
+          <HeroSection title="פרסום ברשת הטיק טוק"  />
           <MainContent />
         </main>
       </div>
