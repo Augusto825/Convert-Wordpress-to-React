@@ -3,11 +3,11 @@ import React from "react";
 const BuildingLinkSection: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col flex-wrap md:flex-nowrap grow-0 shrink self-auto justify-normal items-normal w-full bg-slate-800 min-h-[260px] px-[10px] max-md:max-w-full">
+      <div className="flex flex-col flex-wrap md:flex-nowrap   self-auto justify-normal items-normal w-full bg-slate-800 min-h-[260px] px-[10px] max-md:max-w-full">
         <div className="flex flex-wrap md:flex-nowrap flex-1 py-2.5 size-full content-[1366px]">
-          <div className="md:w-[14.52%] w-full flex flex-col p-[10px] grow-0"></div>
+          <div className="md:w-[14.52%] w-full flex flex-col p-[10px] "></div>
           <div
-            className={`flex flex-col gap-5 grow-0 box-border shrink p-2.5 text-right md:w-[57.975%] w-full max-md:max-w-full`}
+            className={`flex flex-col gap-5  box-border  p-2.5 text-right md:w-[57.975%] w-full max-md:max-w-full`}
           >
             <div
               className={` text-4xl font-bold max-w-full leading-10 text-teal-300 max-md:max-w-full`}
@@ -39,14 +39,14 @@ const BuildingLinkSection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col grow-0 border-solid border-r-[3px] border-r-teal-300 gap-[20px] p-[10px] mr-[31px] ml-[75px] mt-[-19px] shrink-0  self-start md:w-[25%] w-full">
+          <div className="flex flex-col  border-solid border-r-[3px] border-r-teal-300 gap-[20px] p-[10px] mr-[31px] ml-[75px] mt-[-19px] md:w-[25%] w-full">
             <div
               className={`w-full min-h-[254px]`}
             >
               <div className="w-full max-w-[256px]">
                 <div className="w-full">
-                  <div className="flex flex-col items-center pr-6 pb-2 pl-6 w-full max-md:px-5">
-                    <div className="flex items-start max-w-full w-[186px]">
+                  <div className="items-center pr-6 pb-2 pl-6 w-full max-md:px-5">
+                    <div className="items-start max-w-full w-[186px]">
                       <svg
                         width="191"
                         height="191"

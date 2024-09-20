@@ -3,10 +3,10 @@ import React from "react";
 const ContentServiceSection: React.FC = () => {
   return (
     <>
-      <div className="flex flex-col flex-wrap md:flex-nowrap grow-0 shrink self-auto justify-normal items-normal w-full bg-slate-800 min-h-[260px] px-[10px] max-md:max-w-full">
+      <div className="flex flex-col flex-wrap md:flex-nowrap   self-auto justify-normal items-normal w-full bg-slate-800 min-h-[260px] px-[10px] max-md:max-w-full">
         <div className="flex flex-wrap md:flex-initial flex-1 py-2.5 size-full content-[1366px]">
           <div
-            className={`flex flex-col gap-5 grow-0 box-border shrink p-2.5 text-right md:w-[60.653%] w-full max-md:max-w-full`}
+            className={`flex flex-col gap-5  box-border  p-2.5 text-right md:w-[60.653%] w-full max-md:max-w-full`}
           >
             <div
               className={` text-4xl font-bold max-w-full leading-10 text-fuchsia-600 max-md:max-w-full`}
@@ -37,17 +37,17 @@ const ContentServiceSection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col grow-0 gap-[20px] p-[10px] mr-[10px] ml-[27px] mt-[-10px] shrink-0  self-start md:w-[25%] w-full">
+          <div className="flex flex-col  gap-[20px] p-[10px] mr-[10px] border-solid border-r-[3px] border-r-fuchsia-600  ml-[27px] mt-[-10px] md:w-[25%] w-full">
             <div
-              className={`w-full border-solid border-r-[3px] border-r-fuchsia-600 min-h-[254px]`}
+              className={`w-full pr-10`}
             >
-              <div className="w-full max-w-[256px]">
+              <div className="w-full ">
                 <div className="w-full">
-                  <div className="flex flex-col items-center pr-6 pb-2 pl-6 w-full max-md:px-5">
-                    <div className="flex items-start max-w-full w-[186px]">
+                  <div className="items-center w-full max-md:px-5">
+                    <div className="items-start max-w-full">
                       <svg
-                        // width="222"
-                        // height="222"
+                        width="222"
+                        height="222"
                         viewBox="0 0 222 222"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"

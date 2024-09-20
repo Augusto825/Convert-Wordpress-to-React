@@ -25,7 +25,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div className="flex flex-col justify-center items-center w-full bg-slate-800 min-h-[260px] px-[10px] max-md:max-w-full">
       <div className="flex sm:flex-nowrap flex-1 py-2.5 pl-52 size-full">
-        <div className={`flex flex-col gap-5 grow shrink p-2.5 text-right ${desPercentage} max-md:max-w-full`} >
+        <div className={`flex flex-col gap-5   p-2.5 text-right ${desPercentage} max-md:max-w-full`} >
           <h2
             className={`flex flex-col justify-center w-full text-4xl font-bold leading-10 ${titleColor} max-md:max-w-full`}
           >
@@ -45,7 +45,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </div>
           </p>
         </div>
-        <div className="flex flex-col grow gap-[20px] shrink justify-center self-start pt-12 pr-6 pl-20 w-72 min-h-[305px] min-w-[240px] max-md:px-5">
+        <div className="flex flex-col  gap-[20px]  justify-center self-start pt-12 pr-6 pl-20 w-72 min-h-[305px] min-w-[240px] max-md:px-5">
           <div
             className={`flex flex-col pt-2.5 pr-3.5 pb-12 pl-2.5 w-full border-solid border-r-[3px] ${borderColor} min-h-[254px]`}
           >

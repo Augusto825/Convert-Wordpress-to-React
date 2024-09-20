@@ -5,10 +5,10 @@ import React from "react";
 
 const WebServiceSection: React.FC = () => {
   return (
-    <div className="flex flex-col md:flex-nowrap grow-0 shrink self-auto justify-normal items-normal w-full bg-slate-800 min-h-[260px] px-[10px] max-md:max-w-full">
+    <div className="flex flex-col md:flex-nowrap   self-auto justify-normal items-normal w-full bg-slate-800 min-h-[260px] px-[10px] max-md:max-w-full">
       <div className="flex flex-wrap md:flex-initial flex-1 py-2.5 size-full content-[1366px]">
         <div
-          className={`flex flex-col gap-5 grow-0 box-border shrink p-2.5 text-right md:w-[57.975%] w-full max-md:max-w-full`}
+          className={`flex flex-col gap-5  box-border  p-2.5 text-right md:w-[57.5%] w-full max-md:max-w-full`}
         >
           <div
             className={` text-4xl font-bold max-w-full leading-10 text-sky-400 max-md:max-w-full`}
@@ -40,31 +40,22 @@ const WebServiceSection: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col grow-0 gap-[20px] shrink-0 justify-center border-solid border-r-[3px] border-r-sky-500 self-start md:w-[18.766%] w-full">
-          <div
-            className={`flex flex-col pt-2.5 pr-3.5 pb-12 pl-2.5 w-full min-h-[254px]`}
-          >
+        <div className="flex flex-col  gap-[20px]  justify-start border-solid border-r-[3px] border-r-sky-500 md:w-[18.766%] w-full">
+          <div className={`w-full`}>
             <div className="w-full max-w-[256px]">
               <div className="w-full">
-                <div className="flex flex-col items-center pr-6 pb-2 pl-6 w-full max-md:px-5">
-                  <div className="flex items-start max-w-full w-[186px]">
-                    {/* <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/46ada65a9fa2fc8ddb662510a6ed396e10ce559d20d14567a58486fec71b7582?placeholderIfAbsent=true&apiKey=addd44d0d4a74bbf9dcbe1a996be8856"
-                      className="object-contain aspect-square w-[186px]"
-                      alt="Service illustration"
-                    /> */}
+                <div className="items-center pr-6 pb-2 pl-6 w-full max-md:px-5">
+                  <div className="items-start max-w-full">
                     <svg
                       width="187"
                       height="166"
-                      viewBox="0 0 187 166"
-                      fill="none"
+                      aria-hidden="true"
+                      className="e-font-icon-svg e-far-gem"
+                      viewBox="0 0 576 512"
                       xmlns="http://www.w3.org/2000/svg"
+                      fill="#3AB2E4"
                     >
-                      <path
-                        d="M150.223 0.523315H36.5565C35.2649 0.523315 34.0378 1.16915 33.3274 2.26707L1.03571 49.8004C0.099247 51.2212 0.196122 53.0942 1.26175 54.3858L90.3867 164.436C91.9367 166.341 94.843 166.341 96.393 164.436L185.518 54.3858C186.584 53.0619 186.68 51.2212 185.744 49.8004L153.485 2.26707C152.742 1.16915 151.547 0.523315 150.223 0.523315ZM143.991 16.0233L164.432 47.0233H142.344L125.649 16.0233H143.991ZM78.7295 16.0233H108.018L124.713 47.0233H62.067L78.7295 16.0233ZM42.7888 16.0233H61.1305L44.4357 47.0233H22.3482L42.7888 16.0233ZM28.9034 62.5233H45.5013L67.5565 114.19L28.9034 62.5233ZM62.1315 62.5233H124.648L93.3899 141.089L62.1315 62.5233ZM119.223 114.19L141.246 62.5233H157.844L119.223 114.19Z"
-                        fill="#3AB2E4"
-                      />
+                      <path d="M464 0H112c-4 0-7.8 2-10 5.4L2 152.6c-2.9 4.4-2.6 10.2.7 14.2l276 340.8c4.8 5.9 13.8 5.9 18.6 0l276-340.8c3.3-4.1 3.6-9.8.7-14.2L474.1 5.4C471.8 2 468.1 0 464 0zm-19.3 48l63.3 96h-68.4l-51.7-96h56.8zm-202.1 0h90.7l51.7 96H191l51.6-96zm-111.3 0h56.8l-51.7 96H68l63.3-96zm-43 144h51.4L208 352 88.3 192zm102.9 0h193.6L288 435.3 191.2 192zM368 352l68.2-160h51.4L368 352z"></path>
                     </svg>
                   </div>
                 </div>
