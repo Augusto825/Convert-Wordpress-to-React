@@ -22,5 +22,5 @@
   },
   "include": [
     "src/**/*"
-  ]
+, "ContactForm/Services.tsx"  ]
 }

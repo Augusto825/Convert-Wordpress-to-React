@@ -1,6 +1,5 @@
 import React from "react";
-import ServiceCard from "./ServiceCard";
-import { isImportTypeAssertionContainer } from "typescript";
+import ServiceCard from "../ServiceSection/ServiceCard";
 import OverviewImg1 from "../../../assets/images/overview-icon1.png.png";
 import OverviewImg2 from "../../../assets/images/overview-icon2.png.png";
 import OverviewImg3 from "../../../assets/images/overview-icon3.png.png";

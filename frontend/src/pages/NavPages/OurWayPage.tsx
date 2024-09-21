@@ -1,5 +1,4 @@
 import React from "react";
-import ServiceSection from "../../components/OurWay/ServiceSection";
 import HeroSection from "../../components/OurWay/HeroSection";
 import ContactForm from "../../components/Portfolio/ContactForm";
 import WebServiceSection from "../../components/OurWay/WebServiceSection";
@@ -15,7 +14,6 @@ const OurWay: React.FC = () => {
       <ContentServiceSection />
       <BuildingLinkSection />
       <StarSection />
-      {/* <ServiceSection/> */}
       <div className=" py-[50px] pl-[50px] flex justify-center">
         <div className="w-3/5 flex justify-center">
         <ContactForm />

@@ -1,11 +1,12 @@
 import React from "react";
 import Hero from "../../components/HomePage/Hero";
-import Services from "../../components/HomePage/ServiceSection/Services";
+
 import ContactForm from "../../components/HomePage/ContactForm";
 import ServiceCards from "../../components/HomePage/ServiceCards/ServiceCards";
 import FeatureCards from "../../components/HomePage/ServiceCards/FeatureCards/FeatureCards";
 import ContactSection from "../../components/HomePage/ContactSection/ContactSection";
 import ServiceTitle from "../../components/HomePage/ServiceTitle";
+import Services from "../../components/HomePage/ContactForm/Services";
 
 const HomePage: React.FC = () => {
   return (
